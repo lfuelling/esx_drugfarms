@@ -32,3 +32,8 @@ Add the following groups to /vrp/cfg/groups.lua
     ```
     The coords for everything is in warehouses.lua
     It's all commented there, coords and shit.
+
+·    Screenshots
+
+https://cdn.discordapp.com/attachments/357969855523192834/389485760522223626/unknown.png
+https://cdn.discordapp.com/attachments/357969855523192834/389485869918322688/unknown.png
