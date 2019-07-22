@@ -28,48 +28,59 @@ Citizen.CreateThread(function()
 
         -- weed check
         DrawMarker(1, 1190.4223632812, -3329.8059082032, 5.6322560310364 - 1.0001, 0, 0, 0, 0, 0, 0, 2.0, 3.0, 2.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1190.4223632812, -3329.8059082032, 5.6322560310364, true) <= 5.0 then
-            if IsControlJustPressed(0, 38) then
-                TriggerServerEvent('probar:permisos')
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1190.4223632812, -3329.8059082032, 5.6322560310364, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
+                TriggerServerEvent('weed:check')
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
 
         -- blanquear check
         DrawMarker(1, 639.78234863282, 2773.1804199218, 42.025310516358 - 1.0001, 0, 0, 0, 0, 0, 0, 2.0, 3.0, 2.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 639.78234863282, 2773.1804199218, 42.025310516358, true) <= 5.0 then
-            if IsControlJustPressed(0, 38) then
-                TriggerServerEvent('blanqueo:permisos')
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 639.78234863282, 2773.1804199218, 42.025310516358, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
+                TriggerServerEvent('counterfeit:check')
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
 
         -- meta check
         DrawMarker(1, 910.54754638672, -1065.3074951172, 37.943222045898 - 1.0001, 0, 0, 0, 0, 0, 0, 2.0, 3.0, 2.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 910.54754638672, -1065.3074951172, 37.943222045898, true) <= 5.0 then
-            if IsControlJustPressed(0, 38) then
-                TriggerServerEvent('meta:permisos')
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 910.54754638672, -1065.3074951172, 37.943222045898, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
+                TriggerServerEvent('meth:check')
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
 
         -- coke check
         DrawMarker(1, 387.51754760742, 3584.7612304688, 33.29222869873 - 1.0001, 0, 0, 0, 0, 0, 0, 2.0, 3.0, 2.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 387.51754760742, 3584.7612304688, 33.29222869873, true) <= 5.0 then
-            if IsControlJustPressed(0, 38) then
-                TriggerServerEvent('coke:permisos')
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 387.51754760742, 3584.7612304688, 33.29222869873, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
+                TriggerServerEvent('coke:check')
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
 
         -- motero check
         DrawMarker(1, 964.48321533204, -1027.0417480468, 40.847507476806 - 1.0001, 0, 0, 0, 0, 0, 0, 2.0, 3.0, 2.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 964.48321533204, -1027.0417480468, 40.847507476806, true) <= 5.0 then
-            if IsControlJustPressed(0, 38) then
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 964.48321533204, -1027.0417480468, 40.847507476806, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
                 TriggerServerEvent('motero:permisos')
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
 
         -- salir weed
-        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1065.430, -3182.969, -39.163, true) <= 5.0 then
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1065.430, -3182.969, -39.163, true) <= 3.0 then
             -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
-            if IsControlJustPressed(0, 38) then
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
@@ -83,7 +94,8 @@ Citizen.CreateThread(function()
         -- coke exit
         if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1088.803, -3188.257, -38.993, true) <= 1.0 then
             -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
-            if IsControlJustPressed(0, 38) then
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
@@ -97,7 +109,8 @@ Citizen.CreateThread(function()
 
         if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 996.933, -3200.605, -36.394, true) <= 1.0 then
             -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
-            if IsControlJustPressed(0, 38) then
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
@@ -110,7 +123,8 @@ Citizen.CreateThread(function()
         -- blanqueo exit
         if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1118.683, -3193.319, -40.391, true) <= 2.0 then
             -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
-            if IsControlJustPressed(0, 38) then
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
@@ -122,7 +136,8 @@ Citizen.CreateThread(function()
         -- motero exit
         if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 996.88189697266, -3157.9697265625, -38.907146453858, true) <= 2.0 then
             -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
-            if IsControlJustPressed(0, 38) then
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
@@ -134,33 +149,33 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterNetEvent('tiene:permisos')
-AddEventHandler('tiene:permisos', function()
+RegisterNetEvent('weed:enter')
+AddEventHandler('weed:enter', function()
     loadWeed()
 end)
 
-RegisterNetEvent('blanqueo:permisos')
-AddEventHandler('blanqueo:permisos', function()
+RegisterNetEvent('counterfeit:enter')
+AddEventHandler('counterfeit:enter', function()
     loadBlanqueo()
 end)
 
-RegisterNetEvent('meta:permisos')
-AddEventHandler('meta:permisos', function()
+RegisterNetEvent('meth:enter')
+AddEventHandler('meth:enter', function()
     loadMeta()
 end)
 
-RegisterNetEvent('coke:permisos')
-AddEventHandler('coke:permisos', function()
+RegisterNetEvent('coke:enter')
+AddEventHandler('coke:enter', function()
     loadCoke()
 end)
 
-RegisterNetEvent('motero:permisos')
-AddEventHandler('motero:permisos', function()
+RegisterNetEvent('bike:enter')
+AddEventHandler('bike:enter', function()
     loadMotero()
 end)
 
-RegisterNetEvent('notiene:permisos')
-AddEventHandler('notiene:permisos', function()
+RegisterNetEvent('jobfail:notify')
+AddEventHandler('jobfail:notify', function()
     ESX.ShowNotification(_U('no_access'))
 end)
 
