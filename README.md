@@ -1,39 +1,25 @@
-# vrp_drugfarms
-This plugin enables buildings from the bikers dlc with weed farms, meth lab, coke lab and a biker club house, they have permission based entrance, if user is in group he can get in, else he can't.
+# esx_drugfarms
 
-Add the following groups to /vrp/cfg/groups.lua
-```
-  ["marihuana"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Eres marihuanero."}) end},
-  }, 
+This plugin, which is originally based on [vrp_drugfarms by D3uxx](https://github.com/D3uxx/vrp_drugfarms), enables weed farms, the meth lab, coke lab and a biker club house from GTA: Online in esx.
 
-  ["blanqueo"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Tu eres un blanqueadero."}) end},
-  }, 
+## Dependencies
 
-  ["meta"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Eres un metero."}) end},
-  }, 
+- [es_extended](https://github.com/ESX-Org/es_extended)
+- [esx_policejob](https://github.com/ESX-Org/esx_policejob/) (optional)
 
-  ["coke"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Eres un puto cocainomano"}) end},
-  }, 
-  ["motero"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Eres un motero."}) end},
-  }, 
-  ```
-  
-  marihuana >> allows weed entrance
-  blanqueo >> money laundering
-  meta >> meth lab
-  coke >> coke lab
-  motero >> biker clubhouse
-  
-    ```
-    The coords for everything is in warehouses.lua
-    It's all commented there, coords and shit.
+Note: not having `esx_policejob` running won't have any negative side effects. If you use another police plugin which has a jobId different than `police`, you can change the value in `config.lua`.
 
-·    Screenshots
+## Installation
 
-https://cdn.discordapp.com/attachments/357969855523192834/389485760522223626/unknown.png
-https://cdn.discordapp.com/attachments/357969855523192834/389485869918322688/unknown.png
+1. Place this folder in `resources/[esx]`
+2. Configure the plugin in `config.lua`
+3. Add `start esx_drugfarms` to your `server.cfg`
+
+## Usage
+
+1. Go to marker
+2. Press `e`/interact
+
+## Credit
+
+As stated above this mod was originally created by [D3uxx](https://github.com/D3uxx/vrp_drugfarms). 
