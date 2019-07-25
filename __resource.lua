@@ -9,8 +9,7 @@ client_scripts {
     'locales/en.lua',
     'locales/es.lua',
     'config.lua',
-    'warehouses.lua',
-    'ipls.lua'
+    'warehouses.lua'
 }
 
 server_scripts {

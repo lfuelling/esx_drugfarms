@@ -1,9 +1,10 @@
 # esx_drugfarms
 
-This plugin, which is originally based on [vrp_drugfarms by D3uxx](https://github.com/D3uxx/vrp_drugfarms), enables weed farms, the meth lab, coke lab and a biker club house from GTA: Online in esx.
+This plugin, which is originally based on [vrp_drugfarms by D3uxx](https://github.com/D3uxx/vrp_drugfarms), enables weed farms, the meth lab, coke lab, document forgery, biker club houses and bunkers from GTA: Online in esx.
 
 ## Dependencies
 
+- [bob74_ipl](https://github.com/Bob74/bob74_ipl)
 - [es_extended](https://github.com/ESX-Org/es_extended)
 - [esx_policejob](https://github.com/ESX-Org/esx_policejob/) (optional)
 

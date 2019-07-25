@@ -24,6 +24,16 @@ AddEventHandler('counterfeit:check', function(_)
     end
 end)
 
+RegisterServerEvent('documents:check')
+AddEventHandler('documents:check', function(_)
+    local player = ESX.GetPlayerFromId(source)
+    if not player.job.name or player.job.name ~= Config.JobId then
+        TriggerClientEvent('documents:enter', source)
+    else
+        TriggerClientEvent('jobfail:notify', source)
+    end
+end)
+
 RegisterServerEvent('meth:check')
 AddEventHandler('meth:check', function(_)
     local player = ESX.GetPlayerFromId(source)
@@ -49,6 +59,37 @@ AddEventHandler('bike:check', function(_)
     local player = ESX.GetPlayerFromId(source)
     if not player.job.name or player.job.name ~= Config.JobId then
         TriggerClientEvent('bike:enter', source)
+    else
+        TriggerClientEvent('jobfail:notify', source)
+    end
+end)
+
+RegisterServerEvent('bike2:check')
+AddEventHandler('bike2:check', function(_)
+    local player = ESX.GetPlayerFromId(source)
+    if not player.job.name or player.job.name ~= Config.JobId then
+        TriggerClientEvent('bike2:enter', source)
+    else
+        TriggerClientEvent('jobfail:notify', source)
+    end
+end)
+
+
+RegisterServerEvent('bunker:check')
+AddEventHandler('bunker:check', function(_)
+    local player = ESX.GetPlayerFromId(source)
+    if not player.job.name or player.job.name ~= Config.JobId then
+        TriggerClientEvent('bunker:enter', source)
+    else
+        TriggerClientEvent('jobfail:notify', source)
+    end
+end)
+
+RegisterServerEvent('doomsday:check')
+AddEventHandler('doomsday:check', function(_)
+    local player = ESX.GetPlayerFromId(source)
+    if not player.job.name or player.job.name ~= Config.JobId then
+        TriggerClientEvent('doomsday:enter', source)
     else
         TriggerClientEvent('jobfail:notify', source)
     end
