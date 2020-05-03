@@ -4,7 +4,7 @@ game 'gta5'
 
 description 'ESX Drugfarms'
 
-version '1.0.0'
+version '1.0.1'
 
 client_scripts {
     '@es_extended/locale.lua',
