@@ -2,9 +2,7 @@ ESX = nil
 
 Citizen.CreateThread(function()
     while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj)
-            ESX = obj
-        end)
+        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
         Citizen.Wait(0)
     end
 end)
@@ -25,10 +23,9 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-
         Citizen.Wait(0)
 
-        local playerCoords = GetEntityCoords(GetPlayerPed(-1), true)
+        local playerCoords = GetEntityCoords(PlayerPedId(), true)
 
         -- weed check
         DrawMarker(1, 1190.4223632812, -3329.8059082032, 5.6322560310364 - 1.0001, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
@@ -128,7 +125,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 1190.4223632812, -3329.8059082032, 5.6322560310364, 239.736)
+                SetEntityCoords(PlayerPedId(), 1190.4223632812, -3329.8059082032, 5.6322560310364, 239.736)
 
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
@@ -143,7 +140,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 387.51754760742, 3584.7612304688, 33.29222869873)
+                SetEntityCoords(PlayerPedId(), 387.51754760742, 3584.7612304688, 33.29222869873)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -157,7 +154,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 910.54754638672, -1065.3074951172, 37.943222045898)
+                SetEntityCoords(PlayerPedId(), 910.54754638672, -1065.3074951172, 37.943222045898)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -171,7 +168,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 639.16082763672, 2773.4375, 42.015407562256, 125.059)
+                SetEntityCoords(PlayerPedId(), 639.16082763672, 2773.4375, 42.015407562256, 125.059)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -185,7 +182,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 2847.09, 4449.52, 48.52, 106.62)
+                SetEntityCoords(PlayerPedId(), 2847.09, 4449.52, 48.52, 106.62)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -199,7 +196,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 964.48321533204, -1027.0417480468, 40.847507476806, 125.059)
+                SetEntityCoords(PlayerPedId(), 964.48321533204, -1027.0417480468, 40.847507476806, 125.059)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -213,7 +210,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 46.42, 2789.16, 57.88, 125.059)
+                SetEntityCoords(PlayerPedId(), 46.42, 2789.16, 57.88, 125.059)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -227,7 +224,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 52.64, 2787.01, 57.88, 140.62)
+                SetEntityCoords(PlayerPedId(), 52.64, 2787.01, 57.88, 140.62)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -241,7 +238,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), -3032.14, 3333.76, 10.24, 140.62)
+                SetEntityCoords(PlayerPedId(), -3032.14, 3333.76, 10.24, 140.62)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -256,7 +253,7 @@ Citizen.CreateThread(function()
                 DoScreenFadeOut(1000)
                 Citizen.Wait(1500)
 
-                SetEntityCoords(GetPlayerPed(-1), 1.90, 6832.18, 15.82)
+                SetEntityCoords(PlayerPedId(), 1.90, 6832.18, 15.82)
                 Citizen.Wait(1000)
                 DoScreenFadeIn(1000)
             end
@@ -317,63 +314,63 @@ end)
 function loadWeed()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 1063.445, -3183.618, -39.164)
+    SetEntityCoords(PlayerPedId(), 1063.445, -3183.618, -39.164)
     DoScreenFadeIn(1000)
 end
 
 function loadBlanqueo()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 1118.683, -3193.319, -40.391)
+    SetEntityCoords(PlayerPedId(), 1118.683, -3193.319, -40.391)
     DoScreenFadeIn(1000)
 end
 
 function loadDocuments()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 1173.54, -3196.63, -39.01, 100.64)
+    SetEntityCoords(PlayerPedId(), 1173.54, -3196.63, -39.01, 100.64)
     DoScreenFadeIn(1000)
 end
 
 function loadMeta()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 996.8969116211, -3200.6459960938, -36.39372253418)
+    SetEntityCoords(PlayerPedId(), 996.8969116211, -3200.6459960938, -36.39372253418)
     DoScreenFadeIn(1000)
 end
 
 function loadCoke()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 1088.803, -3188.257, -38.993)
+    SetEntityCoords(PlayerPedId(), 1088.803, -3188.257, -38.993)
     DoScreenFadeIn(1000)
 end
 
 function loadMotero()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 998.4809, -3164.711, -38.90733)
+    SetEntityCoords(PlayerPedId(), 998.4809, -3164.711, -38.90733)
     DoScreenFadeIn(1000)
 end
 
 function loadMotero2()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 1107.04, -3157.399, -37.51859)
+    SetEntityCoords(PlayerPedId(), 1107.04, -3157.399, -37.51859)
     DoScreenFadeIn(1000)
 end
 
 function loadBunker()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 892.6384, -3245.8664, -98.2645)
+    SetEntityCoords(PlayerPedId(), 892.6384, -3245.8664, -98.2645)
     DoScreenFadeIn(1000)
 end
 
 function loadDoomsday()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
-    SetEntityCoords(GetPlayerPed(-1), 483.73, 4812.65, -58.38, 97.16)
+    SetEntityCoords(PlayerPedId(), 483.73, 4812.65, -58.38, 97.16)
     DoScreenFadeIn(1000)
 end
 
