@@ -116,6 +116,31 @@ Citizen.CreateThread(function()
                 ESX.ShowHelpNotification(_U('press_to_enter'))
             end
         end
+            
+        -- union depository entry (no check)
+        DrawMarker(1, 10.45, -672.95, 33.45 - 1.0001, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 10.45, -672.95, 33.45, true) <= 3.0 then
+            if IsControlPressed(0, 51) then
+                loadUD()
+            else
+                ESX.ShowHelpNotification(_U('press_to_enter'))
+            end
+        end
+            
+         -- union depository exit
+        DrawMarker(1, 0.85, -703.07, 16.13 - 1.0001, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
+        if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 0.85, -703.07, 16.13, true) <= 2.5 then
+            -- TriggerEvent("fs_freemode:displayHelp", i18n.translate("exit_warehouse"))
+            ESX.ShowHelpNotification(_U('press_to_exit'))
+            if IsControlPressed(0, 51) then
+                DoScreenFadeOut(1000)
+                Citizen.Wait(1500)
+
+                SetEntityCoords(GetPlayerPed(-1), 9.94, -667.52, 33.45, 31.34)
+                Citizen.Wait(1000)
+                DoScreenFadeIn(1000)
+            end
+        end
 
         -- weed exit
         if GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, 1065.430, -3182.969, -39.163, true) <= 3.0 then
@@ -371,6 +396,13 @@ function loadDoomsday()
     DoScreenFadeOut(1000)
     Citizen.Wait(1500)
     SetEntityCoords(PlayerPedId(), 483.73, 4812.65, -58.38, 97.16)
+    DoScreenFadeIn(1000)
+end
+
+function loadUD()
+    DoScreenFadeOut(1000)
+    Citizen.Wait(1500)
+    SetEntityCoords(GetPlayerPed(-1), 0.85, -703.07, 16.13, 312.99)
     DoScreenFadeIn(1000)
 end
 
