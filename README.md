@@ -1,6 +1,6 @@
 # esx_drugfarms [![Latest Release](https://img.shields.io/github/v/release/lfuelling/esx_drugfarms)](https://github.com/lfuelling/esx_drugfarms/releases)
 
-This plugin, which is originally based on [vrp_drugfarms by D3uxx](https://github.com/D3uxx/vrp_drugfarms), enables weed farms, the meth lab, coke lab, document forgery, biker club houses and bunkers from GTA: Online in esx.
+This plugin, which is originally based on [vrp_drugfarms by D3uxx](https://github.com/D3uxx/vrp_drugfarms), enables access to the weed farm, the meth lab, coke lab, document forgery, biker club houses and bunkers from GTA: Online in esx. This mod does not provide any additional functionality except teleportation and the map markers.
 
 - **If you fork this, you won't get updates.** 
     - **Consider Starring instead if you don't want to make a contribution.**
