@@ -2,11 +2,11 @@ fx_version 'cerulean'
 
 game 'gta5'
 
-author 'Lfuelling'
+author 'lfuelling'
 
 description 'ESX Drugfarms'
 
-version '1.0.2'
+version '1.0.4'
 
 client_scripts {
     '@es_extended/locale.lua',
