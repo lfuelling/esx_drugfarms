@@ -1,31 +1,23 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 
 game 'gta5'
 
+author 'Lfuelling'
+
 description 'ESX Drugfarms'
 
-version '1.0.1'
+version '1.0.2'
 
 client_scripts {
     '@es_extended/locale.lua',
-    'locales/en.lua',
-    'locales/es.lua',
-    'locales/nl.lua',
-    'locales/cs.lua',
-    'locales/fr.lua',
-    'locales/de.lua',
+    'locales/*.lua',
     'config.lua',
     'warehouses.lua'
 }
 
 server_scripts {
     '@es_extended/locale.lua',
-    'locales/en.lua',
-    'locales/es.lua',
-    'locales/nl.lua',
-    'locales/cs.lua',
-    'locales/fr.lua',
-    'locales/de.lua',
+    'locales/*.lua',
     'config.lua',
     'server.lua'
 }
